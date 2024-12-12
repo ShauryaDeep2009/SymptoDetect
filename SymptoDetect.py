@@ -104,7 +104,7 @@ if z!=None and y!=None and x!=None and w!=None and v!=None and u!=None:
 
 
         
-    DATA_PATH = ".\SymptoDetect\Training.csv"
+    DATA_PATH = ".\\SymptoDetect\\Training.csv"
     data = pd.read_csv(DATA_PATH).dropna(axis = 1)
 
     disease_counts = data["prognosis"].value_counts()
@@ -185,7 +185,7 @@ if z!=None and y!=None and x!=None and w!=None and v!=None and u!=None:
     final_rf_model.fit(X, y)
     
 
-    test_data = pd.read_csv(".\SymptoDetect\Testing.csv").dropna(axis=1)
+    test_data = pd.read_csv(".\\SymptoDetect\\Testing.csv").dropna(axis=1)
     
     test_X = test_data.iloc[:, :-1]
     test_Y = encoder.transform(test_data.iloc[:, -1])
